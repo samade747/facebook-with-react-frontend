@@ -13,10 +13,9 @@ function App() {
     <BrowserRouter> // 
       <Routes>
         <Route path="/" exact element={user ? <Home /> : <Register />} />
-        
-
-
-
+        <Route path="/login" element={user ? <Navigate to="/" /> : <Login />} />
+        <Route path="/register" element={user ? <Navigate to="/" />  : <Register />} /> 
+        <Route path="/profile/:username" exact element={<Profile userInfo={user} /> } />     
       </Routes>
     </BrowserRouter>
   )
