@@ -43,16 +43,40 @@ const TopBar = () => {
             </Link>
             ),
         },
-        
+        {
+            key: "2",
+            label: (
+            <Link to={`/profile/${user.username}`}>
+                Profile
+            </Link>
+            ),
+        },
+        {
+            key: "3",
+            label: "Sign Out",
+            onClick: () => signOutHandler(),
+            
+        },
+        {
+            key: "4",
+            label: "Show Friends",
+            onClick: () => showFriendsHandler(),
+        },
+    ];
+   const showHiddenLeftbar = () => { // function to handle showing and hiding leftbar
+       dispatch({ type: "HIDDEN_LEFTBAR", payload: !isShow }) // dispatch action to show and hide leftbar
+       console.log('isShow', isShow);
+   } 
 
 
+   return(
+        <div>   
 
 
+            
+        </div>
 
-
-    ]
-
-
+   )
 
 
 
