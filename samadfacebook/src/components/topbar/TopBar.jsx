@@ -12,7 +12,7 @@ import { useContext } from "react";
 import { AuthContext } from "../../context/AuthContext";
 
 const TopBar = () => {
-    const navigate = useNavigate();
+    const navigate = useNavigate(); // 
     const { user, isShow, friends, dispatch } = useContext(AuthContext);
     
 }
