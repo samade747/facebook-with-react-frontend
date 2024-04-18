@@ -10,7 +10,7 @@ function App() {
   const {user} = useContext(AuthContext)
 
   return (
-    <BrowserRouter>
+    <BrowserRouter> // 
       <Routes>
         <Route path="/" exact element={user ? <Home /> : <Register />} />
         
