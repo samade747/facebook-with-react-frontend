@@ -70,16 +70,73 @@ const TopBar = () => {
 
 
    return(
-        <div>   
+        <div className="topbarContainer">   
+
+            <div className="topbarLeft">
+                <Link to={'/'}>
+                <span className="logo">Facebook</span>
+                </Link>
+            </div>
+
+            <div className="topbarCenter">
+                <div className="searchbar">
+                    <SearchIcon className="searchIcon" />
+                    <input
+                        placeholder="Search for friend, post or video"
+                        className="searchInput"
+                    />
+                </div>
+            </div>
+
+            <div className="topbarRight">
+                <div className="topbarLinks">
+                    <span className="topbarLink">Homepage</span>
+                    <span className="topbarLink">Timeline</span>
+                </div>
+            </div>
+
+            <div className="topbarIcons">
+                <div className="topbarIconItem">
+                    <Person />
+                    <span className="topbarIconBadge">1</span>
+                </div>
+                <div className="topbarIconItem">
+                    <Chat />
+                    <span className="topbarIconBadge">2</span>
+                </div>
+                <div className="topbarIcons">
+                    <div className="topbarIconItem" style={{display:"flex", alignItems:"center"}}>
+                    <FaBars className="fabarsIcon" style={{fontSize:"20px"}} onClick={showHiddenLeftbar}/>
+                    </div>
+                </div>
+
+                <div className="topbarIconItem">
+                    <Person />
+                    <span className="topbarIconBadge">1</span>
+                </div>
+                c
+            </div>
+
+            <Dropdown
+                menu={{
+                    items,
+                }}
+                placement="bottomRight"
+                arrow={{
+                    pointAtCenter: true,
+                }}
+                >  
+                <img src={user.profilePicture ? user.profilePicture : Pic_1}  />
+                </Dropdown>
 
 
-            
+
         </div>
 
    )
-
-
-
-
-
 }
+
+
+
+export default TopBar;
+
