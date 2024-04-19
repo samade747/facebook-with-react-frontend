@@ -42,12 +42,21 @@ const Sidebar = () => {
                   </li>
 
                   <li className="sidebarListItem">
-                     <Group className="sidebarIcon" />
+                     <Bookmark className="sidebarIcon" />
                      <span className="sidebarListItemText">Bookmarks</span>                                         
                   </li>
 
 
+                  <li className="sidebarListItem">
+                     <HelpOutline className="sidebarIcon" />
+                     <span className="sidebarListItemText">Questions</span>                                         
+                  </li>
 
+
+                  <li className="sidebarListItem">
+                     <WorkOutline className="sidebarIcon" />
+                     <span className="sidebarListItemText">Jobs</span>                                         
+                  </li>
 
 
 
