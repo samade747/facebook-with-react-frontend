@@ -59,22 +59,31 @@ const Sidebar = () => {
                   </li>
 
 
+                  <li className="sidebarListItem">
+                     <Event className="sidebarIcon" />
+                     <span className="sidebarListItemText">Events</span>                                         
+                  </li>
 
 
-
-
-
-
-
-
-
-
-               </ul>  
+                  <li className="sidebarListItem">
+                     <School className="sidebarIcon" />
+                     <span className="sidebarListItemText">Courses</span>                                         
+                  </li>
+               </ul>
+                  <button className="sidebarbutton">Show More</button>
+                  <hr className="sidebarHr" />                  
+                  <ul  className='sidebarFriendList'>  
+                     {
+                        Users?.map((u) => (
+                           <CloseFriend key={u.id} user={u} />
+                        ))
+                     }
+                  </ul>
+               </div>                           
          </div>
         }
             </div> 
-    )
+    )   
+   }
 
-   
-}
-
+export default Sidebar;
