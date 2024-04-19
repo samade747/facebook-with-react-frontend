@@ -41,7 +41,10 @@ export default function Profile({ userInfo }) {
     const fromRef = useRef(); // state for from input field
     const relationshipRef = useRef(); // state for relationship input field
 
-    
+    const [user, setUser] = useState({}); // state for user data 
+    const username = useParams().username; // getting username from url
+
+
 
     
 
